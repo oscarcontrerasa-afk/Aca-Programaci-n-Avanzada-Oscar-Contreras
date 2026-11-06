@@ -2,9 +2,9 @@
 
 ## PORTADA
 
-**\[NOMBRE DE TU INSTITUCIÓN / UNIVERSIDAD\]**
+**\[CORPORACIO UNIFICADA NACIONAL / CUN\]**
 
-**\[PROGRAMA / CURSO\]**
+**\[PROGRAMACIÓN AVANZADA / 54467\]**
 
 ### ACA -- Programación Avanzada
 
@@ -12,15 +12,15 @@
 
 **Presentado por:**
 
-\[Tu Nombre Completo\]
+\[Oscar Julian Contreras Avendaño\]
 
 **Docente:**
 
-\[Nombre de tu Profesora\]
+\[Veronica Castro\]
 
 **Fecha:**
 
-\[Tu Ciudad\], 5 de noviembre de 2026
+\[Bogotá\], 6 de noviembre de 2026
 
 # CONTRAPORTADA
 
@@ -28,15 +28,15 @@
 
 Proyecto desarrollado como evidencia del curso de **Programación Avanzada**, aplicando Programación Orientada a Objetos, base de datos relacional, arquitectura por capas, operaciones CRUD, validaciones, manejo de excepciones y conexión con SQL Server.
 
-**Estudiante(s):** \[Tu Nombre Completo\]
+**Estudiante(s):** \[Oscar Julian Contreras Avendaño\]
 
-**Programa:** \[Nombre de tu programa\]
+**Programa:** \[Programación Avanzada\]
 
-**Grupo:** \[Tu Grupo\]
+**Grupo:** \[54467\]
 
-**Docente:** \[Nombre de tu Profesora\]
+**Docente:** \[Veronica Castro\]
 
-**Institución:** \[Nombre de tu Institución\]
+**Institución:** \[Corporación Nacional Unificada CUN\]
 
 **Año:** 2026
 
@@ -292,24 +292,34 @@ Se utilizó el patrón de arquitectura en 3 capas:
 
 # 11. CAPTURAS DE PANTALLA DEL SISTEMA
 
-> **NOTA PARA EL ESTUDIANTE:** En tu documento final en Word o PDF, reemplaza estos marcadores por las imágenes reales.
+En esta sección se incluyen las evidencias de las principales funcionalidades desarrolladas mediante Windows Forms.
 
-* \[Insertar Imagen del Menú Principal\]
-  **Descripción:** Pantalla central de acceso rápido a los 4 módulos del sistema.
+## 11.1 Menú principal
+![Menú principal](imagenes/menu.png)
+**Descripción:** Pantalla principal de navegación que conecta todos los módulos del sistema aplicando el RF08.
 
-* \[Insertar Imagen del Formulario de Usuarios\]
-  **Descripción:** Interfaz para crear, modificar, leer y eliminar los lectores. Se aprecia la validación de selección de fila en el DataGridView.
+## 11.2 Gestión de libros y autores
+![Gestión de libros](imagenes/libros.png)
+**Descripción:** Módulo que permite el registro, consulta, actualización y eliminación de los libros en la base de datos (RF01 y RF02).
 
-* \[Insertar Imagen del Formulario de Préstamos\]
-  **Descripción:** Interfaz donde se relacionan Libros y Usuarios usando ComboBox y se gestionan las devoluciones actualizando la base de datos en tiempo real.
+## 11.3 Gestión de usuarios
+![Gestión de usuarios](imagenes/usuarios.png)
+**Descripción:** Interfaz para administrar los usuarios de la biblioteca, validando campos obligatorios como el documento (RF04).
+
+## 11.4 Registro de préstamos y devoluciones
+![Registro de préstamos](imagenes/prestamos.png)
+**Descripción:** Módulo transaccional que permite asignar un libro a un usuario y registrar su posterior devolución (RF05 y RF06).
 
 # 12. PRUEBAS DE FUNCIONAMIENTO
 
-* **Prueba 01 (Inserción Correcta):** Se registró un usuario nuevo, el sistema arrojó el MessageBox de éxito y el DataGridView se actualizó instantáneamente.
+## 12.1 Estrategia de pruebas
+Se realizaron pruebas unitarias manuales verificando la correcta inserción de datos en SQL Server y la validación de excepciones (ej. evitar campos nulos).
 
-* **Prueba 02 (Integridad - Documento Repetido):** Se intentó registrar un usuario con una cédula existente. El bloque `try-catch` capturó el error SQL y notificó al usuario sin que la aplicación se "colgara" o cerrara de golpe.
+## 12.2 Evidencias de pruebas
 
-* **Prueba 03 (Préstamo y Devolución):** Se seleccionó un libro y un usuario y se guardó. Luego se hizo clic en devolver y el estado cambió a "Devuelto", marcando la fecha actual de la máquina correctamente (Uso de `GETDATE()` en SQL).
+### Prueba de Inserción Exitosa
+![Evidencia Prueba](imagenes/prueba.png)
+**Resultado:** El sistema valida correctamente la lógica de negocio y almacena la información en la base de datos relacional mostrando confirmación visual.
 
 # 13. CONCLUSIONES
 
@@ -331,6 +341,6 @@ Se utilizó el patrón de arquitectura en 3 capas:
 
 # ANEXOS
 
-**Anexo A. Repositorio GitHub:** \[Pega tu enlace de GitHub aquí\]
+**Anexo A. Repositorio GitHub:** [Ver repositorio en GitHub](https://github.com/oscarcontrerasa-afk/Aca-Programaci-n-Avanzada-Oscar-Contreras)
 
 **Anexo B. Script de Base de datos:** Archivo `script.sql` adjunto en la entrega.
